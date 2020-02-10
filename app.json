@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "会员账号共享助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color":"#888888",
+    "selectedColor":"#e64340",
+    "backgroundColor":"#fff",
+    "list":[
+      {
+        "pagePath":"pages/home/home",
+        "text":"首页",
+        "iconPath":"static/homedef.png",
+        "selectedIconPath":"static/homesel.png"
+
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "客户中心",
+        "iconPath": "static/userdef.png",
+        "selectedIconPath": "static/usersel.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,15 @@
+<!--
+@author:zhangliang
+@create_date:2020/02/10 23:36
+@update:2020/02/10 23:36
+-->
+
+<van-row>
+    <van-col span="8">1</van-col>
+    <van-col span="8">1</van-col>
+    <van-col span="8">1</van-col>
+</van-row>
+<van-row>
+1
+</van-row>
+
