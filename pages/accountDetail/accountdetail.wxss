@@ -1,0 +1,14 @@
+/* pages/accountDetail/accountdetail.wxss */
+.title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.font-30{
+ font-size: 30rpx; 
+}
+.marg-30{
+  margin:30rpx 0;
+}
+.marg-10{
+  margin:10rpx 0;
+}

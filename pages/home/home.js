@@ -1,4 +1,6 @@
 // pages/home/home.js
+const test = require('../../utils/Integral.js')
+
 Page({
 
   /**
@@ -7,12 +9,32 @@ Page({
   data: {
 
   },
+  goDetail:function(res){
+    var tempid = res.currentTarget.id
+    wx.navigateTo({
+      url: '../accountDetail/accountdetail?urlid=' + tempid,
+      fail:function(res){
+        console.log(res)
+      }
+    })
+  },
+  hello:function(res){
+    test.addintegral(3)
+   console.log(test.getuserIntegral())
+  },
+  reduce:function(res){
+   
+   console.log(test.reduceIntegral(3, 3))
+    console.log(test.getuserIntegral())
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+    console.log(test.getuserIntegral())
+    
   },
 
   /**

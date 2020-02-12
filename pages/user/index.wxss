@@ -1,1 +1,79 @@
 /* pages/user/index.wxss */
+.user-head {
+  background-color: #fe6464;
+  height: 150pt;
+  text-align: center;
+  
+}
+.user-head-login {
+  display: flex;
+  height: 148pt;
+  align-items: center;
+  justify-content: center;
+}
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: solid 5rpx white;
+}
+.user-head-jifen{
+  display: flex;
+  height: 148pt;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+.w-100p{
+  width: 100%;
+  margin: 3rpx 0;
+}
+.font-30r{
+  font-size:80rpx;
+}
+
+
+
+.user-action-item {
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  margin-left: 3%;
+  width: 94%;
+  
+}
+.item-img{
+  width: 20%;
+  height: 120rpx;
+  
+}
+.item-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 120rpx;
+  width: 50%;
+  
+}
+.item-content-title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.item-content-text{
+  font-size: 30rpx;
+  color: #838383
+}
+
+.item-share-button{
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  width: 30%;
+
+}
+.item-button{
+  font-size: 28rpx;
+  width: 85%
+}

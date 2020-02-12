@@ -1,0 +1,61 @@
+<!--pages/accountDetail/accountdetail.wxml-->
+
+<van-row>
+  <van-col span="24">
+  <van-image
+    width="{{fmWidth}}"
+    height="{{fmHeight}}"
+    src="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/fm_baidupan.jpg"
+  />
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="20" offset="2">
+    <view class="title marg-30">百度云网盘账号共享</view>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="14" offset="2">
+    <view class="font-30 marg-10">账号：{{acc}}</view>
+  </van-col>
+  <van-col span="8">
+    <van-button
+    size="small"
+    color="#e64340"
+    >复制账号</van-button>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="20" offset="2">
+    <view class="font-30 marg-10 ">可用时长：24小时</view>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="20" offset="2">
+    <view class="font-30 marg-10 ">密码：{{showpwd}}</view>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="20" offset="2">
+    <view class="marg-30">
+       <van-button
+        size="large"
+        color="#e64340"
+        bind:click="getpwd"
+        disabled="{{btnable}}"
+       >获取密码</van-button>
+    </view>
+  </van-col>
+</van-row>
+
+<van-row>
+  <van-col span="20" offset="2">
+    <view class="marg-30">
+       <van-button
+        size="large"
+        open-type="contact"
+        bind:contact="handleContact"
+       >密码失效反馈</van-button>
+    </view>
+  </van-col>
+</van-row>

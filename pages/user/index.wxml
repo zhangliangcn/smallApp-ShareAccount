@@ -1,2 +1,57 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<!--
+@author:zhangliang
+@create:2020/02/10 12:22
+@update:2020/02/10 12:22
+
+-->
+<block wx:if="{{!hasUserInfo}}">
+<van-notice-bar
+        text="您目前未登陆，建议登陆方便获取积分"
+        left-icon="info-o"
+      />
+</block>
+
+<van-row custom-class="user-head">
+  <van-col span="10">
+  <!-- 登录模块 -->
+    <view class="user-head-login">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 用户登录 </button>
+        <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+    </view>
+  </van-col>
+  <van-col span="14">
+    <view class="user-head-jifen">
+      <view class="w-100p">我的积分余额</view>
+      <view class="w-100p font-30r">{{userIntegral}}</view>
+      <view class="w-100p">查看历史</view>
+    </view>
+  </van-col>
+</van-row>
+
+<van-divider />
+<view class="user-action-item">
+<!-- 图标 -->
+  <view class="item-img">
+    <image 
+    style="width:100%;height:100%;"
+    src="../../static/icon-s.png"
+      mode="aspectFit"
+    ></image>
+  </view>
+
+  <view class="item-content">
+    <view class="item-content-title">转发分享</view>
+    <view class="item-content-text">每天最多可获得30积分</view>
+  </view>
+
+  <view class="item-share-button">
+    <button class="item-button"
+      open-type="share"
+    >去分享</button>
+  </view>
+
+</view>
+<van-divider />
+

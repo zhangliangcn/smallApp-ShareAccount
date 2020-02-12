@@ -31,7 +31,7 @@
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
-	"simulatorType": "wechat1",
+	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {

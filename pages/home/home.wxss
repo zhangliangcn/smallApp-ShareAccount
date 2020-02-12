@@ -1,1 +1,14 @@
-/* pages/home/home.wxss */
+/* 
+@author:zhangliang
+@create:2020/02/11 00:39
+@update:2020/02/11 00:39
+
+ */
+ .card-title {
+   color: red !important;
+   font-size: 13pt;
+   margin: 5pt 0;
+ }
+ .mar-b-10{
+   margin-bottom: 10pt;
+ }
