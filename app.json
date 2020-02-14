@@ -1,12 +1,13 @@
 {
   "pages": [
-   
+    "pages/kanjia/kanjia",
     "pages/home/home",
     "pages/accountDetail/accountdetail",
     "pages/user/index",
     "pages/index/index",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "components/kj-product/kj-product",
+    "components/kj-action/kj-action"
   ],
   "window": {
     "backgroundTextStyle": "light",

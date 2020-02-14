@@ -2,11 +2,11 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    var shareLogs = wx.getStorageSync('shareLogs') || []
-    logs.unshift(Date.now())
+    // var logs = wx.getStorageSync('logs') || []
+    // var shareLogs = wx.getStorageSync('shareLogs') || []
+    // logs.unshift(Date.now())
     
-    wx.setStorageSync('logs', logs)
+    // wx.setStorageSync('logs', logs)
 
 
 
@@ -44,3 +44,14 @@ App({
     userintegral:0
   }
 })
+
+
+
+/**
+ * 存储桶的固定前缀：https://temp-1251251237.cos.ap-chengdu.myqcloud.com/【文件名】
+ * https://temp-1251251237.cos.ap-chengdu.myqcloud.com/user-zhuan.png
+ * https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-head.jpg
+ * 
+ * 
+ * 
+ */

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "kj-product":"/components/kj-product/kj-product",
+    "kj-action":"/components/kj-action/kj-action"
+
+  },
+  "navigationBarBackgroundColor":"#eb1c12",
+  "navigationBarTextStyle":"white",
+  "navigationBarTitleText":"砍价",
+  "backgroundColor":"#eb1c12"
+}

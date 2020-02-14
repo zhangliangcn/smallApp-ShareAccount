@@ -1,0 +1,10 @@
+/* pages/kanjia/kanjia.wxss */
+page {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#eb1c12;  
+}
+.custom-class{
+  margin-top: 20rpx;
+}

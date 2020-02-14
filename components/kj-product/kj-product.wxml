@@ -1,0 +1,80 @@
+<!-- 
+@Author:azhangliang@vip.qq.com
+@create:2020/02/13 22:25
+@update
+
+ -->
+
+<view class="container">
+  <view class="top">
+    <view class="top-l">
+    <!-- 用户头像 -->
+      <van-image
+        width="95%"
+        height="95%" 
+        fit="contain"
+        radius="50%"
+        custom-class="radius-image"
+        src="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-head.jpg"
+      />
+    </view>
+    <view class="top-r">
+      <view class="top-r-nickname">
+        <!-- 昵称 -->
+        我的昵称去哪了
+      </view>
+      <view class="top-r-message">
+        <!-- 用户发起的标语 -->
+        『我发现了一件好货，一起来砍价吧！』
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom-l">
+    <!-- 底部块左侧 -->
+      <van-image 
+      width="99%"
+      height="99%"
+      fit="contain"
+      radius="3%"
+      custom-class="radius-image-product"
+      src="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-product.jpg"
+      />
+    </view>
+    <view class="bottom-r">
+      <view class="bottom-r-title">
+        <!-- 商品标题 -->
+        【20个】不锈钢球不掉渣钢丝球
+      </view>
+      <view class="bottom-r-slot">
+        <slot></slot>
+      </view>
+      
+      <!-- <slot>22222</slot> -->
+      
+      <view class="bottom-r-time">
+        <van-count-down
+            use-slot
+            time="{{ time }}"
+            bind:change="onChange"
+          >
+          <text class="item">{{ timeData.days }}</text>
+          <text>天</text>
+          <text class="item">{{ timeData.hours }}</text>
+          <text>时</text>
+          <text class="item">{{ timeData.minutes }}</text>
+          <text>分</text>
+          <text class="item">{{ timeData.seconds }}</text>
+          <text>秒</text><text class="time-text-style">后结束</text>
+        </van-count-down>
+      </view>
+
+    
+
+
+
+    </view>
+  
+  </view>
+
+</view>

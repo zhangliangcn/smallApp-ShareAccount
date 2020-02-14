@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "van-row": "@vant/weapp/row",
+   "van-col": "@vant/weapp/col",
+   "van-image":"@vant/weapp/image",
+   "van-count-down":"@vant/weapp/count-down"
+  },
+  "component":true
+}

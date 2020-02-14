@@ -1,0 +1,135 @@
+/* component/kj-product/kj-product.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 627.5rpx; */
+  /* padding: 30rpx; */
+  /* 750rpx 是微信屏幕宽度 31.25rpx 是标准1/24 布局单元*/
+  width: calc(23/24*750rpx);
+  height: 500rpx;
+  background: #fff;
+  border-radius: 90rpx 90rpx 15rpx 15rpx;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  /* border: solid 1rpx #000; */
+  height: 160rpx;
+  width: calc(100% - 60rpx);
+}
+.top-l{
+  
+  /* border: solid 1rpx #000; */
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 50%;
+}
+.top-r{
+  display: flex;
+  flex-direction: column;
+  /* border: solid 1rpx #000; */
+  height: 140rpx;
+  width: calc(100% - 190rpx);
+  margin-left: 20rpx;
+}
+.top-r-nickname{
+  /* border: solid 1rpx #000; */
+  height: 50rpx;
+  width: 100%;
+  font-size: 30rpx;
+  color: #5d5d5d;
+  overflow: hidden;
+}
+.top-r-message{
+  /* border: solid 1rpx #000; */
+  height: 90rpx;
+  width: 100%;
+  font-size: 30rpx;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  /* border: solid 1rpx #000; */
+  height: 250rpx;
+  width: calc(100% - 60rpx);
+  border-radius: 13rpx;
+  background: #f2f2f2;
+  padding: 15rpx;
+}
+
+.bottom-l{
+  /* border: solid 1rpx #ecb950; */
+  height: 250rpx;
+  width: 250rpx;
+  border-radius: 3%;
+}
+.bottom-r{
+  display: flex;
+  flex-direction: column;
+  
+  height: 250rpx;
+  width: calc(100% - 260rpx);
+  margin-left: 10rpx;
+}
+
+.bottom-r-title{
+  width: 100%;
+  height: 90rpx;
+  overflow: hidden;
+  
+}
+.bottom-r-slot{
+  width: 100%;
+  overflow: hidden;
+  height: 100rpx;
+}
+.bottom-r-time{
+  top: 90%;
+  height: 50rpx;
+  
+  /* border: solid 1rpx #ecb950; */
+}
+
+.bottom-r-time-ts{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+/* 头像图片样式设置 边框*/
+.radius-image{
+  border: solid 3rpx #b2b2b2;
+}
+/* 商品图片样式设置 */
+.radius-image-product{
+  border: solid 3rpx #ecb950;
+}
+/* 倒计时样式 */
+.item {
+  display: inline-block;
+  width: 40rpx;
+  margin: 5rpx;
+  color: #fff;
+  font-size: 25rpx;
+  text-align: center;
+  background-color: #e80000;
+  border-radius: 5rpx;
+}
+.time-text-style{
+  font-size:30rpx;
+  color:#e80000;
+  font-weight: bold;
+}
