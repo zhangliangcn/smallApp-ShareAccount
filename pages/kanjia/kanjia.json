@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "kj-product":"/components/kj-product/kj-product",
-    "kj-action":"/components/kj-action/kj-action"
+    "kj-action":"/components/kj-action/kj-action",
+    "kj-logs": "/components/kj-logs/kj-logs"
 
   },
   "navigationBarBackgroundColor":"#eb1c12",

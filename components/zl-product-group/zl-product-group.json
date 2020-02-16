@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zl-product-window":"../zl-product-window/zl-product-window"
+  },
+  "component": true
+}

@@ -1,0 +1,3 @@
+Component({
+  externalClasses: ["custom-class"]
+})

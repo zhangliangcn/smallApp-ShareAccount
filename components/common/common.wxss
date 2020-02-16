@@ -1,0 +1,261 @@
+/* 临时CSS 用于调试 */
+.temp-border-red{
+  /* border: solid 1rpx red; */
+}
+.temp-bg{
+  background: rgba(255, 0, 0, 0.226);
+}
+.temp-gb-yellow{
+  background: yellow;
+}
+/* css 公共变量 */
+
+
+page{
+  --card-width:calc(23/24*750rpx);
+}
+.zl-24{
+  width: 100%;
+}
+.zl-border-w{
+  border: solid 1prx white;
+}
+.zl-border-b{
+  border: solid 1rpx black;
+}
+.row{
+  width: 100%;
+}
+/* display 操作 */
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-jus-c{
+  display: flex;
+  justify-content: center;
+}
+.flex-align-c{
+  display: flex;
+  align-items: center;
+}
+.flex-jus-align-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 字体操作 */
+.font-b{
+  font-weight: bold;
+}
+.font-s-10{
+  font-size: 10rpx;
+}
+.font-s-20{
+  font-size: 20rpx;
+}
+.font-s-30{
+  font-size: 30rpx;
+}
+.font-s-40{
+  font-size: 40rpx;
+}
+.font-s-50{
+  font-size: 50rpx;
+}
+.font-s-60{
+  font-size: 60rpx;
+}
+.font-s-70{
+  font-size: 70rpx;
+}
+.font-s-80{
+  font-size: 80rpx;
+}
+.font-s-90{
+  font-size: 90rpx;
+}
+.font-s-100{
+  font-size: 100rpx;
+}
+/* padding top + bottom */
+.p-t-b-5{
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+}
+.p-t-b-10{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.p-t-b-15{
+ padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.p-t-b-20{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.p-t-b-25{
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+.p-t-b-30{
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.p-t-b-35{
+  padding-top: 35rpx;
+  padding-bottom: 35rpx;
+}
+
+
+
+
+
+
+/* padding left right */
+.p-l-r-5{
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+}
+.p-l-r-10{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.p-l-r-15{
+ padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.p-l-r-20{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.p-l-r-25{
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+.p-l-r-30{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.p-l-r-35{
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+}
+
+
+/* margin top + bottom 操作 */
+.m-t-b-5{
+  margin: 5rpx 0;
+}
+.m-t-b-10{
+  margin: 10rpx 0;
+}
+.m-t-b-15{
+  margin: 15rpx 0;
+}
+.m-t-b-20{
+  margin: 20rpx 0;
+}
+.m-t-b-25{
+  margin: 25rpx 0;
+}
+.m-t-b-30{
+  margin: 30rpx 0;
+}
+.m-t-b-35{
+  margin: 35rpx 0;
+}
+.m-t-b-40{
+  margin: 40rpx 0;
+}
+.m-t-b-45{
+  margin: 45rpx 0;
+}
+.m-t-b-50{
+  margin: 50rpx 0;
+}
+.m-t-b-55{
+  margin: 55rpx 0;
+}
+.m-t-b-60{
+  margin: 60rpx 0;
+}
+.m-t-b-65{
+  margin: 65rpx 0;
+}
+.m-t-b-70{
+  margin: 70rpx 0;
+}
+.m-t-b-75{
+  margin: 75rpx 0;
+}
+.m-t-b-80{
+  margin: 80rpx 0;
+}
+.m-t-b-85{
+  margin: 85rpx 0;
+}
+.m-t-b-90{
+  margin: 90rpx 0;
+}
+.m-t-b-95{
+  margin: 95rpx 0;
+}
+.m-t-b-100{
+  margin: 100rpx 0;
+}
+
+
+/* margin-left */
+.m-l-10{
+  margin-left: 10rpx;
+
+}
+.m-l-20{
+  margin-left: 20rpx;
+
+}
+.m-l-30{
+  margin-left: 30rpx;
+
+}
+.m-l-40{
+  margin-left: 40rpx;
+
+}
+.m-l-50{
+  margin-left: 50rpx;
+
+}
+.m-l-60{
+  margin-left: 60rpx;
+
+}
+.m-l-70{
+  margin-left: 70rpx;
+
+}
+.m-l-80{
+  margin-left: 80rpx;
+
+}
+.m-l-90{
+  margin-left: 90rpx;
+
+}
+.m-l-100{
+  margin-left: 100rpx;
+
+}
+
+
+
+
+
+
+
+
+

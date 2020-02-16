@@ -1,0 +1,69 @@
+/* components/kj-record-item/kj-record-item.wxss */
+@import '../common/common.wxss';
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 15rpx 0;
+  background:#f2f2f2;
+  padding: 15rpx 0;
+  border-radius: 15rpx;
+  
+}
+
+
+/* 头像设置 */
+.head{
+  display: flex;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx; 
+}
+.head-img{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  border: solid 3rpx #b2b2b2;
+}
+
+
+/* 昵称跟砍价招式 */
+.desc {
+  width: 300rpx;
+  height: 100rpx;
+  font-size: 25rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.item{
+  margin: 3rpx 10rpx;
+  overflow: hidden;
+}
+.zhaoshi {
+  color: #5d5d5d;
+}
+
+/* 砍价金额大小 */
+.kj{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.icon-kj{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 10rpx;
+}
+.font-red{
+  color: red;
+  font-size: 40rpx;
+}
+.jin-e-kj{
+ font-size: 30rpx;
+ width: 200rpx;
+}

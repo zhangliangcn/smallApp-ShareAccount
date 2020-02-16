@@ -1,0 +1,125 @@
+page{
+  background: #f2f2f2;
+
+}
+view{
+  margin: 0;
+}
+.nav-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  border: solid 1px #d3d3d3;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30rpx;
+  width: 80px;
+  height: 30px;
+  top: 50px;
+  font-size: 16px;
+  left: 10px;
+}
+
+/* 图片样式 */
+
+.img-product-desc{
+  width: 750rpx;
+  height: 750rpx;
+}
+
+/* 产品价格等样式设置 */
+.title-product-desc{
+  width: 750rpx;
+  height: 220rpx;
+  background: white;
+  margin-top: -10rpx;
+}
+.integral {
+  font-size: 20px;
+  color: #eb1c12;
+  font-weight: bold;
+  padding: 20rpx 0 10rpx 40rpx;
+  width: 710rxp;
+  height: 40rpx;
+  /* 40rpx +30rpx = 70rpx */
+}
+.integral-until{
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 10rpx;
+}
+.deference{
+  padding: 0 0 10rpx 80rpx;
+  width: 670rpx;
+  font-size: 12px;
+  color: #D76A03;
+  height: 30rpx;
+  /* 40rpx; */
+}
+.product-title{
+   padding: 0 0 10rpx 40rpx;
+   width: 710rpx;
+   font-size: 15px;
+   font-weight: bold;
+   height: 30rpx;
+   /* 40rpx */
+}
+.other-desc{
+  padding: 0 40rpx 10rpx 40rpx;
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #4D5153;
+  margin: 20rpx 0 0 10rpx;
+  height: 30rpx;
+  /* border: solid 1rpx red; */
+  /* 70rpx; */
+}
+.records{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx 20rpx 40rpx;
+  width: 670rpx;
+  background: white;
+  margin:10rpx 0;
+  color: #4D5153;
+  font-size: 12px;
+  height: 40rpx;
+}
+.tabbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 120rpx;
+  background: white;
+  padding: 10rpx 40rpx;
+  width: 670rpx;
+  bottom: 0rpx;
+  
+}
+.exchange{
+  height: 80rpx;
+  flex-basis: 350rpx;
+  flex-shrink: 1;
+}
+.home{
+  flex-basis: 70rpx;
+  flex-shrink: 1;
+  height: var(--home_icon_width, 60rpx);
+  width:var(--home_icon_width, 60rpx);
+}
+.product-desc{
+  margin: 10rpx 0 12rpx 0;
+  padding: 40rpx;
+  width: 670rpx;
+  background: white;
+  font-size: 14px;
+}
+.product-desc .title{
+  width: 670rpx;
+}

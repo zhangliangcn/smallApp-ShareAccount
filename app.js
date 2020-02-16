@@ -1,6 +1,19 @@
 //app.js
+const _NEV=require('utils/deviceInfo.js')
+//腾讯统计工具
+var mta = require('utils/mta_analysis.js')
+
 App({
   onLaunch: function () {
+
+// 初始化腾讯统计组件
+
+    mta.App.init({
+      "appID": "500710667",
+      "autoReport": true,
+      "statParam": true,
+      "ignoreParams": [],
+    });
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // var shareLogs = wx.getStorageSync('shareLogs') || []

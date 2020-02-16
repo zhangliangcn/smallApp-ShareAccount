@@ -1,1 +1,60 @@
 /* components/kj-action/kj-action.wxss */
+@import '../common/common.wxss';
+.container{
+  display: flex;
+  justify-content: center;
+  width:calc(23/24*750rpx - 40rpx);
+  background: white;
+  padding: 20rpx;
+  height: 500rpx;
+  border-radius: 15rpx;
+}
+
+.action-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  font-size: 30rpx;
+  font-family:  Arial, Helvetica, sans-serif;
+  
+}
+.redfont{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: red;
+}
+.progress{
+  margin: 60rpx 0;
+  width: 70%; 
+}
+.role-kj-btn{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 110rpx;
+}
+.img-kj-btn{
+  width: 100%;
+  height: 110rpx;
+}
+.role-kj-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fef8e8;
+  height: 200rpx;
+}
+
+/* 底部道具样式 */
+
+.daoju-img{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 20rpx;
+}

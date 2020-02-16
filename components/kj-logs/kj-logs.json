@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "kj-record-item":"../kj-record-item/kj-record-item"
+  }
+}

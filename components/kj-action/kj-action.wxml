@@ -1,3 +1,46 @@
-<view 
-class="custom-class"
-> this is component</view>
+<view class="custom-class container"> 
+<!-- 发起人砍价页面 -->
+<view class="action-body" wx:if="{{role==1}}">
+    <view class="title">
+    
+      最低<text class="redfont"> 0 </text>元拿，先自己<text class="redfont">砍一下</text>吧 ~
+    </view>
+    <view class="progress">
+      <van-progress 
+         pivot-text="{{progress_text}}"
+          color="#f2361d"
+          percentage="{{per}}"
+      />
+    </view>
+    <view class="role-kj-btn">
+     <image src="../../static/btn_mykj.gif" class="role-kj-btn"></image>
+    </view>
+    <view class="role-kj-bottom">
+        <image src="../../static/daoju.gif" bindtap="daoju_action" mode="aspectFit" class="daoju-img" />
+        <image src="../../static/daoju2.gif" bindtap="daoju_action" mode="aspectFit" class="daoju-img" />
+        <image src="../../static/daoju3.gif" bindtap="daoju_action" mode="aspectFit" class="daoju-img" />
+    </view>
+  </view>
+  <!-- 发起人砍价页面结束 -->
+
+
+
+<!-- 新手砍价者 -->
+  <view class="action-body" wx:if="{{role==2}}">
+    <view class="title">
+    
+      已砍掉<text class="redfont">10.62</text>元，预计还要<text class="redfont">14</text>个新用户看到<text class="redfont">0</text>元
+    </view>
+    <view class="progress">
+      <van-progress 
+         pivot-text="还差14.28元"
+          color="#f2826a"
+          percentage="75"
+      />
+    </view>
+    <view>
+     <button size="large" type="warn" class="sumit">我要砍价</button>
+    </view>
+    <view>4</view>
+  </view>
+</view>

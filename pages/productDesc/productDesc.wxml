@@ -1,0 +1,25 @@
+<view class="nav-back" bindtap="goback">《 返回</view>
+<image class="img-product-desc" src="{{productInfo.img}}" mode="aspecFit" /> 
+<view class="title-product-desc">
+  <view class="integral">{{product_integral}}<text class="integral-until">积分</text></view>
+  <view class="deference">还差{{product_integral}}积分完成免费兑换充值</view>
+  <view class="product-title">{{productInfo.title}}</view>
+  <view class="other-desc">
+    <view class="item"><text style="text-decoration: line-through;">市场价：{{productInfo.price}} 元</text></view>
+    <view class="item">邮费：包邮</view>
+    <view class="item">库存：22件</view>
+  </view>
+</view>
+<view class="records">
+  已有78人兑换成功
+</view>
+
+<view class="product-desc">
+  <view class="title">产品说明</view>
+
+</view>
+<view class="tabbar">
+   <image src="../../static/homedef.png" class="home" bindtap="goHome" />
+  <image src="../../static/share.png" class="home" bindtap="goShare" />
+  <image src="../../static/btn_dh.gif" class="exchange" bindtap="goExchang" />
+</view>

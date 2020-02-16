@@ -15,6 +15,7 @@ Component({
   },
   methods:{
     onChange(e) {
+      
       this.setData({
         timeData: e.detail
       });

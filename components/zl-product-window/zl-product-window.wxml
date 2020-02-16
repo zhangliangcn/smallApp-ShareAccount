@@ -1,0 +1,16 @@
+
+<!-- 
+@module desc : 商品的单个橱窗组件
+@Author:张亮
+@createTime:2020/02/16 11:48
+ -->
+
+<view class="container  custom-class ">
+  <view class="box">
+    <image src="{{product_img}}" class="img-prouct" />
+    <view class="price">{{product_price}} 元</view>
+    <view class="btn-kan">
+      <image src="../../static/btn_kan.png" class="img-btn-kan"/> 
+    </view>
+  </view>
+</view>

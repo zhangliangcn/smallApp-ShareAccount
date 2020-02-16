@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+
 var basic_1 = require("../mixins/basic");
+
 function mapKeys(source, target, map) {
     Object.keys(map).forEach(function (key) {
         if (source[key]) {
@@ -10,8 +12,11 @@ function mapKeys(source, target, map) {
 }
 function VantComponent(vantOptions) {
     var _a;
+
     if (vantOptions === void 0) { vantOptions = {}; }
+
     var options = {};
+
     mapKeys(vantOptions, options, {
         data: 'data',
         props: 'properties',
@@ -24,12 +29,18 @@ function VantComponent(vantOptions) {
         destroyed: 'detached',
         classes: 'externalClasses'
     });
+
+
     var relation = vantOptions.relation;
+
     if (relation) {
         options.relations = Object.assign(options.relations || {}, (_a = {},
             _a["../" + relation.name + "/index"] = relation,
             _a));
     }
+
+
+
     // add default externalClasses
     options.externalClasses = options.externalClasses || [];
     options.externalClasses.push('custom-class');

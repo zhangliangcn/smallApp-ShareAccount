@@ -1,0 +1,15 @@
+<view class="container custom-class">
+  <view class="head">
+  <!-- 砍价人的头像 -->
+
+    <image src="{{headimg}}" class="head-img" />
+  </view>
+  <view class="desc">
+    <view class="nickname item">{{nickname}}</view>
+    <view class="zhaoshi item">{{actionString}}</view>
+  </view>
+  <view class="kj">
+    <image src="../../static/icon-kj.png" class="icon-kj" />
+    <view class="jin-e-kj">砍掉了<text class="font-red">{{quota}}</text>元</view>
+  </view>
+</view>

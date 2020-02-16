@@ -1,2 +1,3 @@
 <kj-product class='custom-class'></kj-product>
-<kj-action></kj-action>
+<kj-action custom-class="gg"></kj-action>
+<kj-logs custom-class="gg1"></kj-logs>

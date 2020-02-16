@@ -1,26 +1,32 @@
-// pages/home/home.js
-const test = require('../../utils/Integral.js')
-
+// pages/productDesc/productDesc.js
+const postInfo = require('../../utils/product.js')
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    my_integral:0,
-    isshow:false
+    productInfo:{}
   },
- 
-  //根据商品ID跳转到商品详细页面
-  goProduct:function(res){
-    console.log(res)
+  goback:function(res){
+    wx.navigateBack({ 
+    })
+  },
+  goHome:function(res){
+    wx.switchTab({
+      url: '../home/home'
+    })
+  },
+  // 点击兑换按钮
+  goExchang:function(res){
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    
+    this.setData({
+      productInfo:postInfo.info
+    })
   },
 
   /**

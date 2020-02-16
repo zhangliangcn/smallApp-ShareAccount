@@ -8,3 +8,9 @@ page {
 .custom-class{
   margin-top: 20rpx;
 }
+.gg {
+  margin-top: 20rpx;
+}
+.gg1 {
+  margin: 20rpx 0;
+}

@@ -1,0 +1,4 @@
+<view class="container  custom-class ">
+  <view class="font-b font-s-40 flex-align-c temp-border-red">{{text}}</view>
+  <image src="../../static/icon-kan.png" class="m-l-20 icon-img"></image>
+</view>

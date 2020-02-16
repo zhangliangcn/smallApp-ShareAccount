@@ -1,0 +1,13 @@
+/* components/zl-title-bar/zl-title-bar.wxss */
+@import '../common/common.wxss';
+
+.container{
+  display: flex;
+  flex-basis: 750rpx;
+  height: 80rpx;
+}
+
+.icon-img{
+  width: 73rpx;
+  height: 70rpx;
+}

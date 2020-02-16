@@ -4,67 +4,61 @@
 @update:2020/02/10 23:36
 -->
 
-<van-row custom-class="mar-b-10">
-    <van-col span="24">
-    <!-- 保留网络加载通知的能力，后期扩展网络加载方式 -->
-      <van-notice-bar
-        text="使用该平台共享账号请遵循法律法规及各个平台政策，负责本平台有权停止您继续使用的权利！"
-        left-icon="info-o"
-      />
-    </van-col>
-</van-row>
-<van-row>
-  <van-col span="24">
-    <van-card 
-      thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png"
-      title="百度云盘账号共享"
-      desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统"
-      title-class="card-title"
-      num="1" 
-     >
-     <view slot="footer">
-        更新时间：2020/02/13
-        <van-button
-          bind:click="goDetail"
-          id="1"
-        >点击获取</van-button>
-     </view>
-     </van-card>
-  </van-col>
-  <van-divider />
-  <van-col span="24">
-    <van-card 
-      thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png"
-      title="百度云盘账号共享"
-      desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统"
-      title-class="card-title"
-      num="1" 
-     >
-     <view slot="footer">
-        更新时间：2020/02/12
-        <van-button
-          bind:click="goDetail"
-          id="2"
-        >点击获取</van-button>
-     </view>
-     </van-card>
-  </van-col>
-  <van-col span="24">
-    <van-card 
-      thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png"
-      title="百度云盘账号共享"
-      desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统"
-      title-class="card-title"
-      num="1" 
-     >
-     <view slot="footer">
-        更新时间：2020/02/12
-        <van-button
-         bind:click="goDetail"
-          id="3"
-        >点击获取</van-button>
-     </view>
-     </van-card>
-  </van-col>
-</van-row>
+<view class="top-size flex-jus-c">
+  <image src="../../static/topbanner.jpg" class="top-size"></image>
+  <view class="my-integral flex-jus-c">
+    <view class="box flex-jus-c">
+      <view class="item-integral m-t-b-5 font-s-60 font-b">{{my_integral}}</view>
+      <view class="item-title">我的积分</view>
+    </view>
+  </view>
+</view>
+<!-- 栏目标题 -->
 
+  <zl-title-bar
+    custom-class="kk"
+    text="平台会员 0 元砍一砍"
+   />
+
+   
+   <zl-product-group />
+
+
+
+
+
+
+
+<view wx:if="{{isshow}}">
+  <van-row>
+    <van-col span="22">账号共享</van-col>
+  </van-row>
+  <van-row>
+    <van-col span="24">
+      <van-card thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png" title="百度云盘账号共享" desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统" title-class="card-title" num="1">
+        <view slot="footer">
+          更新时间：2020/02/13
+          <van-button bind:click="goDetail" id="1">点击获取</van-button>
+        </view>
+      </van-card>
+    </van-col>
+    <van-divider />
+    <van-col span="24">
+      <van-card thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png" title="百度云盘账号共享" desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统" title-class="card-title" num="1">
+        <view slot="footer">
+          更新时间：2020/02/12
+          <van-button bind:click="goDetail" id="2">点击获取</van-button>
+        </view>
+      </van-card>
+    </van-col>
+    <van-col span="24">
+      <van-card thumb="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/1.png" title="百度云盘账号共享" desc="百度网盘（原百度云）是百度推出的一项云存储服务，已覆盖主流PC和手机操作系统" title-class="card-title" num="1">
+        <view slot="footer">
+          更新时间：2020/02/12
+          <van-button bind:click="goDetail" id="3">点击获取</van-button>
+        </view>
+      </van-card>
+    </van-col>
+  </van-row>
+
+</view>

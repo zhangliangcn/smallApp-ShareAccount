@@ -1,0 +1,8 @@
+/* components/zl-product-group/zl-product-group.wxss */
+.container {
+  display: flex;
+  width: 710rpx;
+  margin: 0 20rpx;
+  /* border: solid 1rpx red; */
+  flex-wrap: wrap;
+}

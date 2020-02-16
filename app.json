@@ -1,13 +1,21 @@
 {
   "pages": [
-    "pages/kanjia/kanjia",
+    
     "pages/home/home",
+    "pages/productDesc/productDesc",
+    "pages/kanjia/kanjia",
     "pages/accountDetail/accountdetail",
     "pages/user/index",
     "pages/index/index",
     "pages/logs/logs",
     "components/kj-product/kj-product",
-    "components/kj-action/kj-action"
+    "components/kj-action/kj-action",
+    "components/kj-logs/kj-logs",
+    "components/kj-record-item/kj-record-item",
+    "components/zl-title-bar/zl-title-bar",
+    "components/zl-product-group/zl-product-group",
+    "components/zl-product-window/zl-product-window"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,5 +42,6 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "resizable": false
 }

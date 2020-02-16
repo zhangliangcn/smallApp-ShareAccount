@@ -1,5 +1,8 @@
 {
   
-  "usingComponents": {},
+  "usingComponents": {
+    "van-progress": "@vant/weapp/progress",
+    "van-button": "@vant/weapp/button"
+  },
   "component":true
 }

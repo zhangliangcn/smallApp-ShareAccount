@@ -1,0 +1,19 @@
+/* components/kj-logs/kj-logs.wxss */
+@import '../common/common.wxss';
+
+.container{
+  width: calc(23/24*750rpx - 40rpx);
+  height: auto;
+  background: white;
+  padding: 40rpx 20rpx;
+  border-radius: 10rpx;
+}
+.kjb-top{
+  display: flex;
+  justify-content: center;
+
+}
+.kjb-title{
+  width: 320rpx;
+  height: 32rpx;
+}
