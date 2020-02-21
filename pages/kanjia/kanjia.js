@@ -1,18 +1,22 @@
-// pages/kanjia/kanjia.js
+const postInfo = require('../../utils/product.js')
+const behavior = require('../../utils/behavior.js')
+
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  behaviors: [behavior],
   data: {
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log("渲染完成")
+  onLoad: function (options) { 
+    console.log(postInfo)
+    this.setData({
+      productInfo: postInfo.item
+    })
+
   },
 
   /**

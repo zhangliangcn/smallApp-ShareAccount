@@ -104,12 +104,13 @@ view{
 }
 .exchange{
   height: 80rpx;
-  flex-basis: 350rpx;
+  flex-basis: 220rpx;
   flex-shrink: 1;
 }
 .home{
-  flex-basis: 70rpx;
+  flex-basis: 60rpx;
   flex-shrink: 1;
+  margin: 0 10rpx;
   height: var(--home_icon_width, 60rpx);
   width:var(--home_icon_width, 60rpx);
 }

@@ -40,7 +40,7 @@
   margin-bottom: 20rpx;
 }
 .img-btn-kan{
-  width: 200rpx;
-  height: 55rpx;
+  width: 180rpx;
+  height: 60rpx;
 }
 

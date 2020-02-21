@@ -1,13 +1,13 @@
-<view class="nav-back" bindtap="goback">《 返回</view>
-<image class="img-product-desc" src="{{productInfo.img}}" mode="aspecFit" /> 
+<view class="nav-back" bindtap="goback">  返回</view>
+<image class="img-product-desc" src="{{productInfo.p_imgurl}}" mode="aspecFit" /> 
 <view class="title-product-desc">
-  <view class="integral">{{product_integral}}<text class="integral-until">积分</text></view>
-  <view class="deference">还差{{product_integral}}积分完成免费兑换充值</view>
-  <view class="product-title">{{productInfo.title}}</view>
+  <view class="integral">{{productInfo.p_price * 500}}<text class="integral-until">积分</text></view>
+  <view class="deference">还差{{productInfo.p_price * 500 - myIntegral}}积分完成免费兑换充值</view>
+  <view class="product-title">{{productInfo.p_name}}</view>
   <view class="other-desc">
-    <view class="item"><text style="text-decoration: line-through;">市场价：{{productInfo.price}} 元</text></view>
+    <view class="item"><text style="text-decoration: line-through;">市场价：{{productInfo.p_price}} 元</text></view>
     <view class="item">邮费：包邮</view>
-    <view class="item">库存：22件</view>
+    <view class="item">库存：{{productInfo.p_inventory}}件</view>
   </view>
 </view>
 <view class="records">
@@ -19,7 +19,8 @@
 
 </view>
 <view class="tabbar">
-   <image src="../../static/homedef.png" class="home" bindtap="goHome" />
+  <image src="../../static/homedef.png" class="home" bindtap="goHome" />
   <image src="../../static/share.png" class="home" bindtap="goShare" />
-  <image src="../../static/btn_dh.gif" class="exchange" bindtap="goExchang" />
+  <image src="../../static/btn_duihuan.png" class="exchange" bindtap="goExchang" />
+  <image src="../../static/btn_kan.png" class="exchange" bindtap="action_kan" />
 </view>

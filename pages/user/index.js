@@ -1,28 +1,38 @@
 // pages/user/index.js
 const app = getApp()
 const sysIntegral = require('../../utils/Integral.js')
+const behavior = require('../../utils/behavior.js')
+const loginIn = require('../../utils/loginIn.js')
+const postInfo = require('../../utils/product.js')
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+
+  behaviors: [behavior,loginIn],
+
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hasUserInfo: false,
-    userIntegral:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //加载积分
-    //console.log(sysIntegral.getuserIntegral())
-    this.setData({
-      userIntegral: sysIntegral.getuserIntegral()
-    })
+      
+      this.setUserInfo()
+    
+
+ 
+
+
+    //判断用户是否已经授权登录过
+
+  
+
     if (app.globalData.userInfo) {
+      
+      postInfo.userInfo = app.globalData.userInfo
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -31,6 +41,7 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
+        postInfo.userInfo = app.globalData.userInfo
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -40,6 +51,19 @@ Page({
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
+          postInfo.userInfo = res.userInfo
+          wx.setStorage({
+            key: 'isLogin',
+            data: true,
+            success:function(){
+              console.log("设置isReg缓存成功")
+            },
+            fail:function(){
+              wx.showToast({
+                title: '换出出错，请联系管理员WX：azhang_liang',
+              })
+            }
+          })
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
@@ -49,56 +73,100 @@ Page({
       })
     }
   },
+
+
   getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+    // e.detail.errMsg:"getUserInfo:fail auth deny"
+    // errMsg: "getUserInfo:ok"
+
+   
+    if (e.detail.errMsg ==="getUserInfo:ok"){
+
+      app.globalData.userInfo = e.detail.userInfo
+
+      
+      
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+
+
+
+      var that = this
+      // 获取用户唯一标识符
+      wx.login({
+        success: res => {
+          wx.request({
+            url: that.data.domian + 'index.php/getSession',
+            method:"POST",
+            data:{
+                code:res.code,
+                nickName:that.data.userInfo.nickName,
+                gender: that.data.userInfo.gender,
+                avatarUrl: that.data.userInfo.avatarUrl,
+                province: that.data.userInfo.province,
+                country: that.data.userInfo.country,
+                city: that.data.userInfo.city
+            },
+            success: function (res) {
+              wx.setStorageSync("isLogin", true)
+              wx.setStorageSync("UserData", res.data)
+              that.setData({
+                userInfo: res.data.userInfo
+              })
+            
+            }
+          })
+        },
+        fail: res => {
+          wx.setStorageSync("openid", "0")
+        }
+      })
+
+    }else{
+      wx.showToast({
+        title: '感谢您的关注',
+      })
+    }
+
+
+
+
+  },
+
+
+  getUserStatus:function(){
+    var that = this
+    wx.getStorage({
+      key: 'isLogin',
+      success: function(res) {
+        console.log(res)
+       if(!res.data){
+         that.setData({
+           hasUserInfo: false
+         })
+       }
+
+      },fail(res){
+        console.log("fail",res)
+        that.setData({
+          hasUserInfo: false
+        })
+      }
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      userIntegral: sysIntegral.getuserIntegral()
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+    console.log(this.data.hasUserInfo)
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
 
   },
 

@@ -13,7 +13,7 @@
       />
     </view>
     <view class="role-kj-btn">
-     <image src="../../static/btn_mykj.gif" class="role-kj-btn"></image>
+     <image src="../../static/btn_mykj.gif" class="role-kj-btn" bindtap="self_kan"></image>
     </view>
     <view class="role-kj-bottom">
         <image src="../../static/daoju.gif" bindtap="daoju_action" mode="aspectFit" class="daoju-img" />

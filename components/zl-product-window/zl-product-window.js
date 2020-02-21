@@ -11,7 +11,7 @@ Component({
     price:22
   },
   attached:function(res){
-    console.log(res)
+    // console.log(res)
   },
   observers:{
     

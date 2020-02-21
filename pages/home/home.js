@@ -1,39 +1,43 @@
-// pages/home/home.js
-const test = require('../../utils/Integral.js')
+const behavior = require('../../utils/behavior.js')
+const app = getApp()
+
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+  behaviors:[behavior],
+
   data: {
-    my_integral:0,
-    isshow:false
+    isshow:false,//是否显示
+  
   },
  
-  //根据商品ID跳转到商品详细页面
-  goProduct:function(res){
-    console.log(res)
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+ 
+
+
+  onLoad: function (options) { 
+
+    //回调函数放置网络延时
+    app.readyUserinfo=res=>{
+      this.setUserInfo()
+    }
     
-    
+
+
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    // this.refreshUserInfo()
 
   },
 

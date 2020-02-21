@@ -1,5 +1,5 @@
 <view class="container  custom-class ">
 <view wx:for="{{productInfo}}" wx:key="type">
-  <zl-product-window bind:tap="goProduct" data-product="{{productInfo[index]}}" product_img="{{productInfo[index].img}}" product_price="{{productInfo[index].price}}" />
+  <zl-product-window bind:tap="goProduct" data-product="{{productInfo[index]}}" product_img="{{productInfo[index].p_imgurl}}" product_price="{{productInfo[index].p_price}}" />
  </view>
 </view>

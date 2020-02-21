@@ -15,13 +15,13 @@
         fit="contain"
         radius="50%"
         custom-class="radius-image"
-        src="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-head.jpg"
+        src="{{userInfo.avatarUrl}}"
       />
     </view>
     <view class="top-r">
       <view class="top-r-nickname">
         <!-- 昵称 -->
-        我的昵称去哪了
+        {{userInfo.nickName}}
       </view>
       <view class="top-r-message">
         <!-- 用户发起的标语 -->
@@ -38,13 +38,13 @@
       fit="contain"
       radius="3%"
       custom-class="radius-image-product"
-      src="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-product.jpg"
+      src="{{product_img}}"
       />
     </view>
     <view class="bottom-r">
       <view class="bottom-r-title">
         <!-- 商品标题 -->
-        【20个】不锈钢球不掉渣钢丝球
+        {{prodcut_title}}
       </view>
       <view class="bottom-r-slot">
         <slot></slot>

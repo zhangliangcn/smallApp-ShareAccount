@@ -1,4 +1,9 @@
+const postInfo = require('../../utils/product.js')
+const behavior = require('../../utils/behavior.js')
+
+
 Component({
+  behavuors:[],
   properties:{
     
   },
@@ -9,7 +14,14 @@ Component({
     per:0//进度条指数，最低0 最高100
   },
   externalClasses:["custom-class"],
+  attached:function(){
+    
+  },
   methods:{
+    self_kan:function(){
+      // 创建订单
+      console.log(now())
+    },
     daoju_action:function(){
      wx.showToast({
        title: '暂未开放1',
