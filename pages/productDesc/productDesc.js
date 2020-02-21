@@ -30,7 +30,7 @@ Page({
   },
  //点击【立即兑换按钮】执行操作
   goExchang:function(res){
-   if(this.data.productInfo.p_price * 500 >this.data.myIntegral){
+    if (getApp().store.getState().productInfo.p_Integral > getApp().store.getState().userInfo.integral){
      wx.showModal({
        title: '积分不足提醒',
        content: '点击确定，邀请朋友帮忙来砍价',
@@ -53,10 +53,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      productInfo:postInfo.item
-    })
-   
+    
+   //console.log(getApp().store.getState().productInfo)
   },
 
   /**

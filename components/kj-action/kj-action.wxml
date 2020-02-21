@@ -1,10 +1,16 @@
 <view class="custom-class container"> 
 <!-- 发起人砍价页面 -->
 <view class="action-body" wx:if="{{role==1}}">
+  <block wx:if="{{title_status===0}}">
     <view class="title">
-    
-      最低<text class="redfont"> 0 </text>元拿，先自己<text class="redfont">砍一下</text>吧 ~
+      最低<text class="redfont">  0  </text>元拿，先自己<text class="redfont"> 砍一下 </text>吧 ~
     </view>
+ </block>
+ <block wx:if="{{title_status===1}}">
+     <view class="title">
+      已砍掉<text class="redfont"> 0 </text>元，预计还要<text class="redfont">165</text>个新用户看到 <text class="redfont">0</text>元
+    </view>
+    </block>
     <view class="progress">
       <van-progress 
          pivot-text="{{progress_text}}"
@@ -13,7 +19,15 @@
       />
     </view>
     <view class="role-kj-btn">
+      <block wx:if="{{btn_status===0}}">
      <image src="../../static/btn_mykj.gif" class="role-kj-btn" bindtap="self_kan"></image>
+     </block>
+      <block wx:if="{{btn_status===1}}">
+      <image src="../../static/btn_friendkj.gif" class="role-kj-btn" bindtap="friend_kan"></image>
+      </block>
+       <block wx:if="{{btn_status===2}}">
+      <image src="../../static/btn_seeVideokj.gif" class="role-kj-btn" bindtap="seeVideo_kan"></image>
+      </block>
     </view>
     <view class="role-kj-bottom">
         <image src="../../static/daoju.gif" bindtap="daoju_action" mode="aspectFit" class="daoju-img" />

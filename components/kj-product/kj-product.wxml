@@ -15,13 +15,13 @@
         fit="contain"
         radius="50%"
         custom-class="radius-image"
-        src="{{userInfo.avatarUrl}}"
+        src="{{$state.userInfo.avatarUrl}}"
       />
     </view>
     <view class="top-r">
       <view class="top-r-nickname">
         <!-- 昵称 -->
-        {{userInfo.nickName}}
+        {{$state.userInfo.nickName}}
       </view>
       <view class="top-r-message">
         <!-- 用户发起的标语 -->

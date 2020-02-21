@@ -24,7 +24,7 @@
   <van-col span="14">
     <view class="user-head-jifen">
       <view class="w-100p">我的积分余额</view>
-      <view class="w-100p font-30r">{{userInfo.integral}}</view>
+      <view class="w-100p font-30r">{{$state.userInfo.integral}}</view>
       <view class="w-100p">查看历史</view>
     </view>
   </van-col>

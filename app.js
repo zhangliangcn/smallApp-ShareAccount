@@ -2,14 +2,46 @@
 const _NEV=require('utils/deviceInfo.js')
 //腾讯统计工具
 var mta = require('utils/mta_analysis.js')
+
 //状态管理
-const postInfo = require('utils/product.js')
+import Store from 'utils/store.js';
+
+let store = new Store({
+
+  state:{
+    version:'1.2.0',
+    desc:'界面修改',
+    userInfo:{
+      nickName:'我的昵称去哪了',
+      avatarUrl:'',
+      integral:0,
+      token:'',
+      refresh_token:''//刷新token
+    },
+    productInfo:{
+      p_Id:'',//产品ID
+      p_Imgurl:'',//产品封面图片，
+      p_Name:'产品的标题',
+      p_Price:10.2,//市场价格
+      p_Integral:500,//所需要积分
+      p_isshipping:1,//是否包邮，1为包邮，0 为不包邮
+      p_inventory:49,//当前剩余库存
+      p_type:''//当前类别
+
+
+    }
+
+  }
+})
+
 
 
 
 App({
-  onLaunch: function () {
 
+  store:store,
+  onLaunch: function () {
+    
 
 // 初始化腾讯统计组件
     mta.App.init({
@@ -51,7 +83,17 @@ App({
 
                       wx.setStorageSync("isLogin", true)
                       wx.setStorageSync("UserData", res.data)
-                      postInfo.userInfo = res.data.userInfo
+                      let { userInfo } = this.store.getState()
+
+
+                      userInfo.nickName = res.data.userInfo.nickName
+                      userInfo.avatarUrl = res.data.userInfo.avatarUrl
+                      userInfo.integral = res.data.userInfo.integral
+
+                      this.store.setState({
+                        userInfo
+                      })
+                      
                     
                       if (this.readyUserinfo) {
                         this.readyUserinfo(res.data.userInfo)
@@ -62,7 +104,7 @@ App({
               })
 
 
-              console.log(this.userInfoReadyCallback,"==========")
+              
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况

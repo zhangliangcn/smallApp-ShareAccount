@@ -1,3 +1,3 @@
-<kj-product class='custom-class' product_img="{{productInfo.p_imgurl}}" prodcut_title="{{productInfo.p_name}}"></kj-product>
+<kj-product class='custom-class' product_img="{{$state.productInfo.p_Imgurl}}" prodcut_title="{{$state.productInfo.p_Name}}"></kj-product>
 <kj-action custom-class="gg"></kj-action>
 <kj-logs custom-class="gg1"></kj-logs>

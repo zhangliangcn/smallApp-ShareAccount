@@ -8,7 +8,7 @@
   <image src="../../static/topbanner.jpg" class="top-size"></image>
   <view class="my-integral flex-jus-c">
     <view class="box flex-jus-c">
-      <view class="item-integral m-t-b-5 font-s-60 font-b">{{userInfo.integral}}</view>
+      <view class="item-integral m-t-b-5 font-s-60 font-b">{{$state.userInfo.integral}}</view>
       <view class="item-title" bindtap="jj">我的积分</view>
     </view>
   </view>
