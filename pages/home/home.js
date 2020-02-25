@@ -10,7 +10,7 @@ Page({
     isshow:false,//是否显示
   
   },
- 
+  
  
 
 
@@ -18,11 +18,13 @@ Page({
 
     //回调函数放置网络延时
     app.readyUserinfo=res=>{
-      this.setUserInfo()
+      // this.setUserInfo()
     }
-    
+    console.log("111")
+    this.isLogin()
 
-
+    var { userInfo } = getApp().store.getState().userInfo
+    console.log(userInfo)
   
   },
 

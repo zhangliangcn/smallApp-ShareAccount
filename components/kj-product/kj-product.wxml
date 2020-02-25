@@ -15,13 +15,13 @@
         fit="contain"
         radius="50%"
         custom-class="radius-image"
-        src="{{$state.userInfo.avatarUrl}}"
+        src="{{headurl}}"
       />
     </view>
     <view class="top-r">
       <view class="top-r-nickname">
         <!-- 昵称 -->
-        {{$state.userInfo.nickName}}
+        {{nickname}}
       </view>
       <view class="top-r-message">
         <!-- 用户发起的标语 -->
@@ -55,7 +55,7 @@
       <view class="bottom-r-time">
         <van-count-down
             use-slot
-            time="{{time}}"
+            time="{{data_time}}"
             bind:change="onChange"
           >
           <text class="item">{{ timeData.days }}</text>

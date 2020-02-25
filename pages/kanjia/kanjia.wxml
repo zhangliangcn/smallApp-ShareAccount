@@ -1,3 +1,25 @@
-<kj-product class='custom-class' product_img="{{$state.productInfo.p_Imgurl}}" prodcut_title="{{$state.productInfo.p_Name}}"></kj-product>
-<kj-action custom-class="gg"></kj-action>
-<kj-logs custom-class="gg1"></kj-logs>
+
+
+
+
+
+
+
+
+
+
+
+<kj-product class='custom-class' headurl="{{shareUserAvatarUrl}}" nickname="{{shareUserNickName}}" orderInfos="{{orderInfos}}" product_img="{{imageUrl}}" prop_time="{{time}}" prodcut_title="{{title}}"></kj-product>
+
+
+<!-- bind:setRecord='updateRecord'  -->
+<kj-action custom-class="gg"
+orderInfos="{{orderInfos}}"
+bind:self_kan='self_kan'
+bind:seeVideo="seeVideo"
+ />
+
+
+
+
+<kj-logs custom-class="gg1" record = "{{record}}" orderInfos="{{orderInfos}}"></kj-logs>

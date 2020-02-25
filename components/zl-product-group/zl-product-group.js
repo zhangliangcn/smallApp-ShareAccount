@@ -7,20 +7,14 @@ Component({
     productInfoList:[]
   },
   attached:function(){
-    
-
-
-
-
-
-
-    //组件实例化进入页面节点后，动态加载远程产品信息
+  
+    //组件实例化进入页面节点后，动态加载远程产品信息，将获取结果存储到页面 data productInfoList 容器
     var that = this 
     wx.request({
-      url: that.data.domian +"index.php/getHomePorductList/6",
+      url: that.data.domian +"index.php/getHomePorductList/7",
       success:function(res){
         // 调试输出API内容
-       
+      //  console.log(res.data)
         that.setData({
           productInfoList:res.data
         })
@@ -33,8 +27,8 @@ Component({
 
   methods:{
     // 用户点击列表中单品时触发进入详情页面
+    // 通过wxml 标签属性data-product，获取用户单击当前商品的详细数据，并存储到全局状态容器 productInfo
     goProduct:function(res){
-
       let { productInfo } =getApp().store.getState()
      
     /*

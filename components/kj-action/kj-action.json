@@ -2,7 +2,8 @@
   
   "usingComponents": {
     "van-progress": "@vant/weapp/progress",
-    "van-button": "@vant/weapp/button"
+    "van-button": "@vant/weapp/button",
+    "van-overlay": "@vant/weapp/overlay"
   },
   "component":true
 }

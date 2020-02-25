@@ -5,7 +5,7 @@
   <view class="deference">还差{{$state.productInfo.p_Price * 500 - myIntegral}}积分完成免费兑换充值</view>
   <view class="product-title">{{$state.productInfo.p_Name}}</view>
   <view class="other-desc">
-    <view class="item"><text style="text-decoration: line-through;">市场价：{{$state.productInfo.p_price}} 元</text></view>
+    <view class="item"><text style="text-decoration: line-through;">市场价：{{$state.productInfo.p_Price}} 元</text></view>
     <view class="item">邮费：包邮</view>
     <view class="item">库存：{{$state.productInfo.p_inventory}}件</view>
   </view>

@@ -2,11 +2,11 @@
   <view class="head">
   <!-- 砍价人的头像 -->
 
-    <image src="{{headimg}}" class="head-img" />
+    <image src="{{headsrc}}" class="head-img" />
   </view>
   <view class="desc">
     <view class="nickname item">{{nickname}}</view>
-    <view class="zhaoshi item">{{actionString}}</view>
+    <view class="zhaoshi item">{{action}}</view>
   </view>
   <view class="kj">
     <image src="../../static/icon-kj.png" class="icon-kj" />

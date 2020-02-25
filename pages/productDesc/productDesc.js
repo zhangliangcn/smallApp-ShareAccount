@@ -1,8 +1,5 @@
-// pages/productDesc/productDesc.js
-// 页面信息传递管理系统
-const postInfo = require('../../utils/product.js')
-//积分系统
-const integral = require('../../utils/Integral.js')
+
+
 const behavior =require('../../utils/behavior.js')
 Page({
   
@@ -14,20 +11,26 @@ Page({
     wx.navigateBack({ 
     })
   },
-  // 左下角【主页按钮】执行函数
+  // 左下角【主页按钮】执行函数，返回主页
   goHome:function(res){
     wx.switchTab({
       url: '../home/home'
     })
   },
   
-  // 点击【砍价0元拿按钮】执行操作
+  // 点击【砍价0元拿按钮】执行操作，进入 pages/kanjia/kanjia 页面
   action_kan:function(){
     wx.navigateTo({
       url: '../kanjia/kanjia',
     })
+   
 
   },
+
+
+
+
+
  //点击【立即兑换按钮】执行操作
   goExchang:function(res){
     if (getApp().store.getState().productInfo.p_Integral > getApp().store.getState().userInfo.integral){
@@ -49,6 +52,16 @@ Page({
    }
     
   },
+
+
+
+
+
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */

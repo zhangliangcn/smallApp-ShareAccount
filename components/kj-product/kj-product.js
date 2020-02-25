@@ -1,30 +1,36 @@
-const postInfo = require('../../utils/product.js')
+const behavior = require('../../utils/behavior.js')
 
 Component({
   properties:{
-    headurl:String,//用户头像
+    headurl:String,//用户头像 
     nickname:String,//用户昵称
     message: String,//用户发起砍价的标语
     product_img: String,
     prodcut_title: String,
     desc: String,
-    start_time:Number
+    prop_time:Number
   },
+  behaviors: [behavior],
   externalClasses:["custom-class"],
   data:{
-    time: 30*30 * 60 * 60 * 1000,//30天
+    data_time:10000,//30天
     timeData: {}
   },
   observers:{
-    "product_img":function(img){
-      // console.log(img)
+    "prop_time": function (prop_time){
+      var tempTime = (this.properties.prop_time - this.getTimestamp())*1000
+      console.log(tempTime)
+      this.setData({
+        data_time: tempTime
+      })
+    },
+    "headurl,nickname":function(){
+
     }
   },
   attached:function(){
-    // 读取【当前用户对象信息】
-    this.setData({
-      userInfo: postInfo.userInfo
-    })
+   
+    
   },
   methods:{
     onChange(e) {

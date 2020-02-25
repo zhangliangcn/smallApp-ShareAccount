@@ -1,5 +1,6 @@
 <view class="container  custom-class ">
 <view wx:for="{{productInfoList}}" wx:key="type">
   <zl-product-window bind:tap="goProduct" data-product="{{productInfoList[index]}}" product_img="{{productInfoList[index].p_imgurl}}" product_price="{{productInfoList[index].p_price}}" />
+ <!-- <zl-product-window bind:tap="loadLogs" data-product="{{productInfoList[index]}}" product_img="{{productInfoList[index].p_imgurl}}" product_price="{{productInfoList[index].p_price}}" /> -->
  </view>
 </view>

@@ -28,7 +28,7 @@
 
 
 
-
+<!-- 
 <view wx:if="{{isshow}}">
   <van-row>
     <van-col span="22">账号共享</van-col>
@@ -61,4 +61,4 @@
     </van-col>
   </van-row>
 
-</view>
+</view> -->

@@ -1,14 +1,13 @@
 // pages/user/index.js
 const app = getApp()
-const sysIntegral = require('../../utils/Integral.js')
 const behavior = require('../../utils/behavior.js')
-const loginIn = require('../../utils/loginIn.js')
-const postInfo = require('../../utils/product.js')
+
+
 
 Page({
 
 
-  behaviors: [behavior,loginIn],
+  behaviors: [behavior],
 
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -20,7 +19,7 @@ Page({
    */
   onLoad: function (options) {
       
-      this.setUserInfo()
+      // this.setUserInfo()
     
 
  
@@ -32,7 +31,7 @@ Page({
 
     if (app.globalData.userInfo) {
       
-      postInfo.userInfo = app.globalData.userInfo
+     
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -41,7 +40,7 @@ Page({
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
-        postInfo.userInfo = app.globalData.userInfo
+        
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -51,7 +50,7 @@ Page({
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          postInfo.userInfo = res.userInfo
+         
           wx.setStorage({
             key: 'isLogin',
             data: true,
@@ -112,9 +111,24 @@ Page({
             success: function (res) {
               wx.setStorageSync("isLogin", true)
               wx.setStorageSync("UserData", res.data)
-              that.setData({
-                userInfo: res.data.userInfo
+              console.log(res.data)
+              let {
+                userInfo
+              } = getApp().store.getState()
+
+
+              userInfo.nickName = res.data.userInfo.nickName
+              userInfo.avatarUrl = res.data.userInfo.avatarUrl
+              userInfo.integral = res.data.userInfo.integral
+              userInfo.openid = res.data.userInfo.openid
+
+              getApp().store.setState({
+                userInfo
               })
+
+              // that.setData({
+              //   userInfo: res.data.userInfo
+              // })
             
             }
           })

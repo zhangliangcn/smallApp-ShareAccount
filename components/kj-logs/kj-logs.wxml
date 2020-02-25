@@ -7,12 +7,12 @@ class="custom-class container"
 
 
 
-  <view class="row" wx:for="{{[1,2,1,3,1,2,2,2,2,2,2,2,2,2,2,2,2,22,2,2,22,2,2,2,2,2,2,2,2]}}" wx:key="index" >
+  <view class="row" wx:for="{{recordData}}" wx:key="index" >
     <kj-record-item
-    headsrc="https://temp-1251251237.cos.ap-chengdu.myqcloud.com/test-temp-head.jpg"
-    nickname="我的昵称去哪了"
-    action="{{index}}"
-    quota="0.1"
+    headsrc="{{recordData[index].avatarUrl}}"
+    nickname="{{recordData[index].nickName}}"
+    action="{{recordData[index].flag}}"
+    quota="{{recordData[index].amount}}"
     ></kj-record-item>
   </view>
 </view>

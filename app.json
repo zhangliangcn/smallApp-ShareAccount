@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/kanjia/kanjia",
+    
     "pages/home/home",
     "pages/productDesc/productDesc",
-    
+    "pages/kanjia/kanjia",
     "pages/accountDetail/accountdetail",
     "pages/user/index",
     "pages/index/index",
